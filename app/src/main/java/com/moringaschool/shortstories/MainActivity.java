@@ -16,18 +16,13 @@ public class MainActivity extends ActionBarActivity  {//implements Fragment.Call
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ParseObject.registerSubclass(Shortstories.class);
 
         // Enable Local Datastore.
         Parse.enableLocalDatastore(this);
 
         Parse.initialize(this, "s1Oo7JNGOjot12S4e1PskSDItLQsoVKRJwiZX4EY", "frDw7K0CKapb62v2fcp1yuFm2aqX786THwKR71Xt");
-        ParseObject testObject = new ParseObject("TestObject");
-        testObject.put("foo", "bar");
-        testObject.saveInBackground();
 
-        testObject = new ParseObject("TestObject");
-        testObject.put("foo", "bar");
-        testObject.saveInBackground();
 //        Fragment myfragment = new Fragment();
 //        getFragmentManager().beginTransaction().add(R.id.main,myfragment).commit();
     }

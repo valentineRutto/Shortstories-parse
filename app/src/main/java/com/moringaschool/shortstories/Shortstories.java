@@ -18,8 +18,22 @@ public void setCategory(String Category){
     public String getTitle() {
         return getString("title");
     }
-
+public  void setTitle(String title)
     {
-
+put("title",title);
     }
+    public String getStory(){
+        return getString("stories");
+    }
+    public void setStory(String Story){
+        put("stories",Story);}
+@Override
+public String toString(){
+return getString("Category")+"\n"+getString("title")+
+        "\n"+getString("stories");
 }
+
+
+}
+
+

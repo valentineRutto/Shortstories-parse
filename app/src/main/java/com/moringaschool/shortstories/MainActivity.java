@@ -10,8 +10,7 @@ import com.parse.Parse;
 import com.parse.ParseObject;
 
 
-public class MainActivity extends ActionBarActivity implements Fragment.Callbacks {
-
+public class MainActivity extends ActionBarActivity  {//implements Fragment.Callbacks
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +28,8 @@ public class MainActivity extends ActionBarActivity implements Fragment.Callback
         testObject = new ParseObject("TestObject");
         testObject.put("foo", "bar");
         testObject.saveInBackground();
-        Fragment myfragment = new Fragment();
-        getFragmentManager().beginTransaction().add(R.id.main,myfragment).commit();
+//        Fragment myfragment = new Fragment();
+//        getFragmentManager().beginTransaction().add(R.id.main,myfragment).commit();
     }
 
     @Override
